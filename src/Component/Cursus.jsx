@@ -31,12 +31,13 @@ const Experience = ({ data = [] }) => {
           >
             {/* Nom et date */}
             <div className="flex justify-between items-center border-b-2 border-gray-300 pb-2 mb-2">
-              <p className="text-gray-800 font-semibold">{event.name}</p>
-              <span className="italic text-sm text-gray-600">{event.date}</span>
-            </div>
+  <p className="text-gray-900 font-semibold">{event.name}</p> {/* plus foncé */}
+  <span className="italic text-sm text-gray-700">{event.date}</span> {/* plus visible */}
+</div>
+
 
             {/* Contenu avec gestion du texte */}
-            <p className="text-gray-700 whitespace-normal">{event.contenu}</p>
+            <p className="text-white whitespace-normal">{event.contenu}</p>
 
             {/* Flèche */}
             <div className="flex justify-end mt-2">

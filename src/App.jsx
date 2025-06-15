@@ -53,11 +53,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <div id="home" className="min-h-screen w-full bg-blue-500">
+      <div id="home" className="h-50 w-full bg-blue-500">
         <div className="flex items-center h-32 bg-blue-500 p-5">
           <h1 className="text-2xl md:text-4xl font-bold text-white">OUEDRAOGO FATAF</h1>
         </div>
-        <h2>
+
+          
+        <h2 className='px-20'>
           <DynamicText />
         </h2>
         <p className="text-2xl  italic text-white  text-2xl p-8">
@@ -87,10 +89,20 @@ function App() {
       <div id="cursus" className="text-5xl text-center font-bold italic text-stroke mt-10">CURSUS</div>
       <div className="flex flex-wrap md:flex-nowrap items-center justify-center px-10 gap-6">
   {/* Première colonne */}
-  <div className="w-full flex flex-col md:flex-row justify-between ">
+
+</div>
+
+
+
+
+
+
+
+
+  <div className="flex flex-wrap md:flex-nowrap items-center justify-center px-4 gap-4 ">
   {/* Colonne de gauche */}
-  <div className="w-full md:w-1/3 flex justify-start ">
-    <div className="w-full max-w-full gap-100"> {/* 🔹 Augmentation de la largeur */}
+  <div className="w-full ml-5 px-5  md:w-1/3 flex justify-start ">
+    <div className="w-full max-w-full gap-80"> {/* 🔹 Augmentation de la largeur */}
       <Experience data={CursusData.eventsLeft1 || []} />
     </div>
   </div>
@@ -101,21 +113,22 @@ function App() {
   </div>
 
   {/* Colonne de droite */}
-  <div className="w-full md:w-1/3 flex justify-end mt-10 p-5 m-10">
-    <div className="w-full max-w-20xl"> {/* 🔹 Augmentation de la largeur */}
+  <div className="w-full md:w-1/3 flex justify-end mt-10 p-5">
+    {/* 🔹 Augmentation de la largeur */}
       <Experience data={CursusData.eventsRight2 || []} />
-    </div>
+  
   </div>
 </div>
 
  
+
+
+<div className="flex flex-wrap md:flex-nowrap items-center justify-center px-4 gap-4"> 
+  {/* Colonne de gauche */}
+  <div className="w-full md:w-1/3  px-5 ml-5 flex justify-start  p-5">
+  <Experience data={CursusData.eventsLeft3 || []} />
 </div>
 
-<div className="flex flex-wrap md:flex-nowrap items-center justify-center px-10 gap-6"> 
-  {/* Colonne de gauche */}
-  <div className="w-full md:w-1/3 flex justify-start mb-10 p-5">
-    <Experience data={CursusData.eventsLeft3 || []} />
-  </div>
 {/* Timeline au centre */}
 <div className="hidden md:flex w-full md:w-1/3 justify-center p-5">
   <Timeline />
@@ -125,7 +138,11 @@ function App() {
   <div className="w-full md:w-1/3 flex justify-end mt-10 p-5">
     <Experience data={CursusData.eventsRight4 || []} />
   </div>
+
 </div>
+
+
+
 
       <div id="portfolio" className="text-4xl text-center font-bold italic text-stroke mt-10">Mon Portfolio</div>
       <div className='flex flex-col md:flex-row justify-center items-center w-full max-w-6xl gap-12 p-12 mx-auto'>

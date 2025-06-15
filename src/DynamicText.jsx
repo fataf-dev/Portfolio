@@ -1,33 +1,58 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
-const elements = ["Conception", "Design", "Développeur Web"];
 
-const DynamicText = () => {
+
+
+
+import React, { useEffect, useState } from "react";
+
+const DynamicText  = () => {
+  const texts = [
+    "Frontend Developer |",
+    "Frontend Deve |",
+    "UI/UX Designer",
+    "Fullstack Dev 🚀"
+  ];
+
+  const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [blink, setBlink] = useState(true); // for blinking cursor
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % elements.length);
-    }, 3000); // Change toutes les 3 secondes
+    if (subIndex === texts[index].length + 1 && !deleting) {
+      setTimeout(() => setDeleting(true), 1000);
+      return;
+    }
 
-    return () => clearInterval(interval);
+    if (subIndex === 0 && deleting) {
+      setDeleting(false);
+      setIndex((prev) => (prev + 1) % texts.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (deleting ? -1 : 1));
+    }, deleting ? 50 : 150);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, deleting, index]);
+
+  // Optional blinking cursor
+  useEffect(() => {
+    const blinkInterval = setInterval(() => {
+      setBlink((prev) => !prev);
+    }, 500);
+    return () => clearInterval(blinkInterval);
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-32 bg-bleu-500">
-      <motion.div
-        key={index} // Permet l'animation fluide
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.8 }}
-        className="text-3xl md:text-5xl font-bold text-white"
-      >
-        {elements[index]}
-      </motion.div>
+    <div style={{ fontFamily: "monospace", fontSize: "24px", whiteSpace: "nowrap" }}>
+      {texts[index].substring(0, subIndex)}
+      <span style={{ opacity: blink ? 1 : 0 }}>|</span>
     </div>
   );
 };
 
-export default DynamicText;
+export default DynamicText ;
+

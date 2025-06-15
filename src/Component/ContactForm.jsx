@@ -82,9 +82,15 @@ const ContactForm = () => {
 
           {/* Liens sociaux */}
           <div className="mt-6 flex space-x-4">
-            <a href="#" className="text-blue-400 text-2xl hover:text-white">
-              <FaGithub />
-            </a>
+           <a 
+  href="https://github.com/OuedFataf-dev/Portfolio" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="text-blue-400 text-2xl hover:text-white"
+>
+  <FaGithub />
+</a>
+
             <a href="#" className="text-blue-400 text-2xl hover:text-white">
               <FaLinkedin />
             </a>

@@ -47,10 +47,13 @@ const DynamicText  = () => {
   }, []);
 
   return (
-    <div style={{ fontFamily: "monospace", fontSize: "24px", whiteSpace: "nowrap" }}>
-      {texts[index].substring(0, subIndex)}
-      <span style={{ opacity: blink ? 1 : 0 }}>|</span>
-    </div>
+    <div
+  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono whitespace-normal break-words  px-2"
+>
+  {texts[index].substring(0, subIndex)}
+  <span style={{ opacity: blink ? 1 : 0 }}>|</span>
+</div>
+
   );
 };
 

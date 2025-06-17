@@ -26,20 +26,25 @@ import ContactForm from './Component/ContactForm';
 function App() {
   const Img1=[
     {
-       image:mobile
+       image:mobile,
+       github:"https://github.com/OuedFataf-dev/livraison-de-repas"
     }
   ]
     
   
   const Img2=[
     {
-       image:mobile2
+       image:mobile2,
+       github:'https://github.com/OuedFataf-dev/project_ecommerce'
+
     }
   ]
   
   const Img3=[
     {
-       image:KOLT
+       image:KOLT,
+       github:'https://github.com/OuedFataf-dev/APPLICATTION_KOTLIN'
+
     }
     
   ]  
@@ -47,7 +52,8 @@ function App() {
 
   const Img4=[
     {
-       image:KOLTin
+       image:KOLTin,
+       github:'https://github.com/OuedFataf-dev/APPLICATTION_KOTLIN'
     }
   ]
   return (
@@ -58,10 +64,13 @@ function App() {
           <h1 className="text-2xl md:text-4xl font-bold text-white">OUEDRAOGO FATAF</h1>
         </div>
 
-          
-        <h2 className='px-20'>
-          <DynamicText />
-        </h2>
+            
+
+            <h1 className='px-10 text-2xl'>I'm </h1>
+      <h2 className="px-2 sm:px-8 md:px-16 lg:px-20 text-2xl sm:text-3xl md:text-4xl font-bold break-words whitespace-normal">
+  <DynamicText />
+</h2>
+
         <p className="text-2xl  italic text-white  text-2xl p-8">
           Développeur web et mobile passionné, je suis spécialisé <br />
           dans la conception et le développement d'applications web <br />

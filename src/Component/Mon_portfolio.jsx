@@ -1,14 +1,26 @@
 import React from "react";
+
 const Portfolio = ({ data }) => {
   return (
     <div className="card card-compact bg-base-100 max-w-2xl shadow-xl">
+
+      {/* Liste des titres en haut */}
+      <div className="p-4 space-y-1">
+        {data.map((item, index) => (
+          <div key={index} className="text-xl font-semibold text-gray-800">
+            {item.title}
+          </div>
+        ))}
+      </div>
+
+      {/* Cartes avec image et lien GitHub */}
       {data.map((item, index) => (
         <div key={index} className="relative group overflow-hidden">
           <figure>
             <img
               src={item.image}
               alt={`Portfolio item ${index}`}
-              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-45  h-45 object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </figure>
 

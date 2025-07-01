@@ -98,50 +98,77 @@ const ContactForm = () => {
         </div>
 
         {/* Formulaire */}
-        <div className="relative flex items-center justify-center w-[300px] h-[350px] bg-[#07182E] rounded-2xl overflow-hidden">
-          {/* Effet d'animation */}
-          <div className="absolute w-[100px] h-[130%] bg-gradient-to-b from-cyan-400 to-pink-500 animate-rotate"></div>
+       <div className="relative flex items-center justify-center w-[320px] min-h-[420px] bg-[#07182E] rounded-2xl overflow-hidden">
+  {/* Animation d'arrière-plan */}
+  <div className="absolute w-[100px] h-[130%] bg-gradient-to-b from-cyan-400 to-pink-500 animate-rotate"></div>
 
-          {/* Fond intérieur */}
-          <div className="absolute inset-1 bg-[#07182E] rounded-xl"></div>
+  {/* Fond intérieur */}
+  <div className="absolute inset-1 bg-[#07182E] rounded-xl"></div>
 
-          {/* Contenu du formulaire */}
-          <div className="relative z-10 text-white w-[90%]">
-            <h2 className="text-xl font-semibold text-center mb-4">Contactez-moi</h2>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-              <input
-                type="text"
-                name="name"
-                placeholder="Votre Nom"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="p-2 rounded bg-[#0A1A35] border border-cyan-400 text-white focus:ring-2 focus:ring-cyan-400 outline-none"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="p-2 rounded bg-[#0A1A35] border border-cyan-400 text-white focus:ring-2 focus:ring-cyan-400 outline-none"
-              />
-              <textarea
-                name="message"
-                placeholder="Écrire votre message..."
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="p-2 rounded bg-[#0A1A35] border border-cyan-400 text-white focus:ring-2 focus:ring-cyan-400 outline-none"
-              ></textarea>
-              <button type="submit" className="p-2 bg-cyan-400 rounded-lg text-[#07182E] font-bold hover:bg-cyan-500 transition">
-                Envoyer
-              </button>
-            </form>
-            {status && <p className="text-center mt-2 text-green-400">{status}</p>}
-          </div>
-        </div>
+  {/* Contenu du formulaire */}
+  <div className="relative z-10 text-white w-[90%]">
+    <h2 className="text-xl font-semibold text-center mb-4">Contactez-moi</h2>
+    
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-sm">
+      {/* Nom */}
+      <div className="flex flex-col">
+        <label htmlFor="name" className="mb-1">Nom :</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Votre nom"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="p-2 rounded bg-[#0A1A35] border border-cyan-400 text-white focus:ring-2 focus:ring-cyan-400 outline-none"
+        />
+      </div>
+
+      {/* Email */}
+      <div className="flex flex-col">
+        <label htmlFor="email" className="mb-1">Email :</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Votre email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="p-2 rounded bg-[#0A1A35] border border-cyan-400 text-white focus:ring-2 focus:ring-cyan-400 outline-none"
+        />
+      </div>
+
+      {/* Message */}
+      <div className="flex flex-col">
+        <label htmlFor="message" className="mb-1">Message :</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Votre message..."
+          value={formData.message}
+          onChange={handleChange}
+          required
+          rows="2"
+          className="p-2 rounded bg-[#0A1A35] border border-cyan-400 text-white focus:ring-2 focus:ring-cyan-400 outline-none resize-none"
+        ></textarea>
+      </div>
+
+      {/* Bouton d'envoi */}
+      <button
+        type="submit"
+        className="p-2 mt-1 bg-cyan-400 rounded-lg text-[#07182E] font-bold hover:bg-cyan-500 transition"
+      >
+        Envoyer
+      </button>
+    </form>
+
+    {/* Message de statut */}
+    {status && <p className="text-center mt-2 text-green-400">{status}</p>}
+  </div>
+</div>
+
       </div>
     </div>
   );

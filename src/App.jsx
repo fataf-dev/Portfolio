@@ -26,6 +26,7 @@ import ContactForm from './Component/ContactForm';
 function App() {
   const Img1=[
     {
+       title:'Application de livraison de Repas',
        image:mobile,
        github:"https://github.com/OuedFataf-dev/livraison-de-repas"
     }
@@ -33,7 +34,8 @@ function App() {
     
   
   const Img2=[
-    {
+    { 
+        title:'Application de Ecommerce',
        image:mobile2,
        github:'https://github.com/OuedFataf-dev/project_ecommerce'
 
@@ -42,6 +44,7 @@ function App() {
   
   const Img3=[
     {
+        title:'Application de Quiz',
        image:KOLT,
        github:'https://github.com/OuedFataf-dev/APPLICATTION_KOTLIN'
 
@@ -52,6 +55,7 @@ function App() {
 
   const Img4=[
     {
+      title:'Application de gestion de taches',
        image:KOLTin,
        github:'https://github.com/OuedFataf-dev/APPLICATTION_KOTLIN'
     }
@@ -71,7 +75,7 @@ function App() {
   <DynamicText />
 </h2>
 
-        <p className="text-2xl  italic text-white  text-2xl p-8">
+        <p className="text-2xl  italic text-white   text-2xl  p-8 ">
           Développeur web et mobile passionné, je suis spécialisé <br />
           dans la conception et le développement d'applications web <br />
           et mobiles personnalisées. Maîtrisant un large éventail de <br />

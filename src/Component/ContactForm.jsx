@@ -20,7 +20,7 @@ const ContactForm = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch("https://formspree.io/f/mjkgapyy", {
+      const response = await fetch("https://formspree.io/f/xdaakqqo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold">Email</h4>
-                <p className="text-gray-400">ouedraogofataf75@gmail.com</p>
+                <p className="text-gray-400">fataf1391@gmail.com</p>
               </div>
             </div>
           </div>

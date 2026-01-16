@@ -7,10 +7,9 @@ import React, { useEffect, useState } from "react";
 
 const DynamicText  = () => {
   const texts = [
-    "Frontend Developer |",
-    "Frontend Deve |",
-    "UI/UX Designer",
-    "Fullstack Dev 🚀"
+    "Frontend Developer",
+  "UI/UX Designer",
+  "Fullstack Developer"
   ];
 
   const [text, setText] = useState("");

@@ -109,7 +109,7 @@ function App() {
       <div id="competences">
         <div>
           <div>   </div>
-          <div className="text-5xl text-center font-bold italic text-stroke mt-10">COMPÉTENCES</div> 
+          <div className="text-5xl text-center font-bold italic text-stroke mt-10">COMPÉTENCES TECHNIQUES</div> 
           <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-5xl gap-12 p-12 mt-10 mx-auto">
             <SkillCard title="Mes Compétences" skills={skillsData.skills1 || []} />
             <SkillCard title="Compétences Web" skills={skillsData.skills2 || []} />

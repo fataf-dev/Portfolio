@@ -15,6 +15,8 @@ import mobile from './assets/mobile.png'
 import mobile2 from './assets/mobil.png'
 import KOLT from './assets/KOLTIN.jpeg'
 import KOLTin from './assets/KOTLI.jpeg'
+import image2 from './assets/image2.jpg'
+import image3 from './assets/image3.jpg'
 import "aos/dist/aos.css";
 import  './ANimation'
 
@@ -58,6 +60,26 @@ function App() {
       title:'Application de gestion de taches',
        image:KOLTin,
        github:'https://github.com/OuedFataf-dev/APPLICATTION_KOTLIN'
+    }
+  ]
+
+
+  const Img5=[
+    {
+        title:"Application d'apprentissage du code de la route",
+       image:image2,
+       github:''
+
+    }
+    
+  ]  
+
+
+  const Img6=[
+    {
+     title:"Application d'apprentissage du code de la route",
+       image:image3,
+       github:''
     }
   ]
   return (
@@ -162,10 +184,19 @@ function App() {
       <Portfolio data={Img1} />
       <Portfolio data={Img2} />
       </div>
+
       <div className='flex flex-col md:flex-row justify-center items-center w-full max-w-6xl gap-12 p-12 mx-auto'>
       <Portfolio data={Img3} />
       <Portfolio data={Img4} />
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-12 max-w-6xl mx-auto">
+  <Portfolio data={Img5} />
+  <Portfolio data={Img6} />
+</div>
+
+
+
              
 
 
